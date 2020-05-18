@@ -1,77 +1,12 @@
-var titulo = document.querySelector(".titulo-principal");
-titulo.textContent = "Pimenta Nutrição";
+var paciente = document.querySelectorAll(".paciente");
 
-var paciente = document.querySelector("#primeiro-paciente");
-console.log(paciente);
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
-
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
-
-var imc = peso / (altura * altura);
-console.log(imc);
-
-var tdImc = paciente.querySelector(".info-imc");
-tdImc.textContent = imc;
-
-var paciente = document.querySelector("#segundo-paciente");
-console.log(paciente);
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
-
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
-
-var imc = peso / (altura * altura);
-console.log(imc);
-
-var tdImc = paciente.querySelector(".info-imc");
-tdImc.textContent = imc;
-
-var paciente = document.querySelector("#terceiro-paciente");
-console.log(paciente);
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
-
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
-
-var imc = peso / (altura * altura);
-console.log(imc);
-
-var tdImc = paciente.querySelector(".info-imc");
-tdImc.textContent = imc;
-
-var paciente = document.querySelector("#quarto-paciente");
-console.log(paciente);
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
-
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
-
-var imc = peso / (altura * altura);
-console.log(imc);
-
-var tdImc = paciente.querySelector(".info-imc");
-tdImc.textContent = imc;
-
-var paciente = document.querySelector("#quinto-paciente");
-console.log(paciente);
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
-
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
-
-var imc = peso / (altura * altura);
-console.log(imc);
-
-var tdImc = paciente.querySelector(".info-imc");
-tdImc.textContent = imc;
+for (i = 0; i < paciente.length; i++) {
+    var aux = paciente[i];
+    var tdPeso = aux.querySelector(".info-peso");
+    var peso = tdPeso.textContent;
+    var tdAltura = aux.querySelector(".info-altura");
+    var altura = tdAltura.textContent;
+    var imc = peso / (altura * altura);
+    var tdImc = aux.querySelector(".info-imc");
+    tdImc.textContent = imc.toFixed(2)
+}
